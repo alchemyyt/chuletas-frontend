@@ -1,0 +1,16 @@
+.content{
+  padding: var(--marginLarge);
+  margin: var(--marginLarge);
+  display: flex;
+  flex-wrap:wrap;
+  gap: var(--marginLarge);
+  justify-content: center;
+}
+.content img{
+  width: 20rem;
+  height: 20rem;
+}
+.content a h5{
+  text-align: center;
+  font-size: var(--fontMedium);
+}

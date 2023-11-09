@@ -1,0 +1,78 @@
+<section>
+  <h2>Mobile First</h2>
+  <p>Mobile firs ya no es un sistema de diseño es casi un estandar la mayor parte de dispositivos conectados a la web son movil.
+  <br>
+  Es tan usado porque es mas facil agregar contenido que quitar y es mas facil de escalar el proyecto.
+  </p>
+  <article>
+      <h2>Pasos a Seguir</h2>
+      <h3>1)Analizando el diseño</h3>
+      <p>Revisamos el diseño que creamos o que nos mandaron por ejemplo en figma.
+      <br>
+      Figma nos da una sugerencia de el tamaño de los estilos pero hay que usarlos solo de referencia
+      </p>
+      <h3>2)Arquitectura inicial</h3>
+      <p>La arquitectura web se puede definir como la forma en que las páginas de un sitio web están estructuradas y enlazadas entre sí (de manera lógica y coherente). Una arquitectura web ideal ayuda a los usuarios y a los motores de búsqueda a encontrar fácilmente lo que están buscando en un sitio web.</p>
+      <h3>3)Assets de nuestro proyecto</h3>
+      <p>Creamos la carpeta assets y buscamos de antemano todos los iconos o logos que vamos a usar y imagenes que necesitemos.Lo podemos buscar de font awesome, google fonts o lo que nos mandaron de figma dandole click y exportandolas.
+      <br>
+      Creamos una carpeta icons y una img.
+      <br>
+      No usar espacio en los archivos</p>
+      <h3>4)Fuentes de nuestro Projecto</h3>
+      <p>Buscamos las fuentes que vamos a usar en google fonts o otra parte, las ponemos en el head y las importamos con css revisar en curso definitivo de CSS y HTML</p>
+      <h3>5)Estilos iniciales y variables</h3>
+      <p>Ponemos el margen y el padding en 0 por defecto, ponemos border-sizing border box, declaramos las variables de los colores en el root y cambiamos el tamaño de la fuente del html  a 62.5% para que un rem sea 10 px y importamos la fuente</p>
+      <ul>
+        <h4>Orden de implementar estilos</h4>
+        <ol>
+          <li>Herencia SASS (si se usa): @extend, @mixin, e.g. clearfix</li>
+          <li>Contenido generado(Puesto con :before :after): content</li>
+          <li>Posicion y layour: positiony, z-index, top, bottom, left, right, Flexbox properties, float, clear</li>
+          <li>Display y visibilidad: display, opacity, transform</li>
+          <li>Recortes: overflow, clip</li>
+          <li>Animacion: animation, transition</li>
+          <li>Forma: margin, box-shadow, border, border-radius, box-sizing, width, height, padding</li>
+          <li>Fondo: background, cursor</li>
+          <li>Tipografia: font-size, line-height, font-family, font-weight, font-style, text-align, text-transform, word-spacing, color</li>
+          <li>Pseudo clases y elementos: :hover,:focus,:active,:before,:after,:first-child,:last-child</li>
+        </ol>
+      </ul>
+      <h3>6)Maquetacion del header</h3>
+      <p>Maquetamos con html el header de nuestro projecto.</p>
+      <h3>7)Implementacion de BEM</h3>
+      <p>Agregamos las clases utilizando la metodologia BEM y Agregamos los estilos</p>
+      <h3>8)Estructurar y dar estilos seccion por seccion del main.</h3>
+      <p>Estructuramos con html y damos estilos con css seccion por seccion del main</p>
+      <p>Asi ponesmos que se vea una contenedor al 70% en mobile y no crezca en desktop mucho y que siempre tenga una wid minimo</p>
+      <h3>9)Scroll horizontal con CSS</h3>
+      <ul>
+          <li><strong>Es importantisimo poner un tamaño maximo del contenedor para que funcione el slider porque sino no se esconde con hiden si no que se adapta</strong></li>
+          <li>
+              <strong>overflow-x</strong>
+              <br>
+              La propiedad de CSS overflow-x establece lo que se muestra cuando el contenido desborda los bordes izquierdo y derecho de un elemento a nivel de bloque. Puede que no sea nada, una barra de desplazamiento o el contenido adicional.
+          </li>
+          <li>
+              <strong>overscroll-behavior</strong>
+              <br>
+              la propiedad de css overscroll-behabior establece lo que hace un navegador cuando alcanza el límite de un área de desplazamiento. Es una abreviatura de overscroll-behavior-x y overscroll-behavior-y.
+              <br>
+              Se usa para evitar el rebote de las animaciones de android que pueden ser molestas y mover el slider
+          </li>
+          <li>
+              <strong>scroll-snap-type</strong>
+              <br>
+              La propiedad CSS scroll-snap-type establece qué tan estrictamente se aplican los puntos de snap en el contenedor de desplazamiento en caso de que haya uno
+          </li>
+      </ul>
+      <h3>10)Maquetar y estilar el footer</h3>
+      <h3>11)Aplicando media queries</h3>
+      <p>Es buena practica que los media queries esten en distintos archivos para que el usuario solo descargue 1</p>
+      <p>Asi se coloca un breakpoint y tiene que ser arriba el css principal y tiene que ser con min width para que sea mobile first</p>
+      <h3>
+          12)Lighthouse 
+      </h3>
+      <p>Es una opcion de crome que evalua la pagina como velocidad, accesibilidad, seo y buenas practicas</p>
+  </article>
+</section>

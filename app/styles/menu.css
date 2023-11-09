@@ -1,0 +1,24 @@
+@media (min-width: 700px) {
+  .menu{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    top: 7.2rem;
+    right: 32rem;
+    align-content: center;
+    background-color: var(--bgMedium);
+    border: 4px solid var(--bgLight);
+    display: grid;
+    font-size: var(--fontMedium);
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: var(--marginLarge);
+    padding: var(--marginLarge);
+    font-size: 2rem;
+  }
+  
+  .menuMobile{display: none;}
+}
+.menu h3 a{
+  color: white;
+} 

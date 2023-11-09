@@ -1,0 +1,93 @@
+.navBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bgMedium);
+  padding: var(--marginLarge);
+  border: var(--bgLight) 4px solid;
+  max-width: 100%;
+}
+.navBar .navRight{
+  display: flex;
+  gap: 1rem;
+  font-size: var(--h1);
+}
+.navBar .navRight path{
+  width: 3rem;
+  height: 3rem;
+}
+.navBar .navRight a svg{
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: solid var(--text) 2px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.navBar .navRight svg{
+  padding: 1rem;
+}
+.socialMediaCtn a{
+  color: var(--text);
+
+}
+
+.socialMediaCtn{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navBar h1{
+  font-size: var(--h1);
+}
+#menu svg{
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  width: 2rem;
+  height: 2rem;
+}
+.menuCtn{
+  display: flex;
+}
+.menuCtn span{
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.menuCtn:hover>span{
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  color: var(--contrastColor);
+  border-bottom:solid 2px ;
+}
+
+
+.menuIcon{
+  display: none;
+}
+a h1{
+  color: var(--text);
+}
+@media (max-width: 700px) {
+  .navbarSpan{
+    display: none;
+  }
+  .menuIcon{
+    display: block;
+  }
+  .menuIcon svg{
+    width: 3rem;
+    height: 3rem;
+  }
+}

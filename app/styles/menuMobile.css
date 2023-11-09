@@ -1,0 +1,62 @@
+.menuMobile{
+  background-color: var(--bgLight);
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  .menu{
+    display: flex;
+    top: 7.2rem;
+    right: 32rem;
+    align-content: center;
+    background-color: var(--bgMedium);
+    border: 4px solid var(--bgLight);
+    display: grid;
+    font-size: var(--fontMedium);
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: var(--marginLarge);
+    padding: var(--marginLarge);
+    font-size: 2rem;
+  }
+  .menuMobile{
+    position: absolute;
+    top: 6.5rem;
+    right: 0;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--marginLarge);
+  }
+  .socialMediaCtn{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .socialMediaCtn a svg {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: solid var(--text) 2px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding: 1rem;
+  }
+  .socialMediaCtn path{
+    width: 3rem;
+    height: 3rem;
+  }
+  .searchCtn input{
+    height: 4rem;
+  }
+  .searchIcon svg{
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .2rem;
+  }
+}

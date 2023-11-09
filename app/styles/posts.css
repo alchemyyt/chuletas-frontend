@@ -1,0 +1,359 @@
+.post{
+  margin: var(--marginLarge);
+  padding: var(--marginLarge);
+}
+.post p, .post h1,.post h2,.post h3,.post h4{
+  margin: var(--marginLarge) 0;
+}
+#ntnChildEx{
+  width: 100%;
+}
+/*cuando pase el raton encima el fondo del ejemplo cambia a azul y las letras negras*/
+#hoverEx:hover{
+  background-color: #29D9D5;
+  color: #121214;
+}
+/*que el 2do li del ejemplo sea azul */
+#ntnChildEx li:nth-child(2){
+  color: #29D9D5;
+}
+/*primera letra del ejemplo azul*/
+#firstLetterEx p::first-letter{
+  color: #29D9D5;
+}
+/*crea un elemento con corazon antes del ejempo*/
+#beforeEx::before{
+  content: "💘";
+}
+/*crea un elemento con corazon despues del ejempo*/
+#afterEx::after{
+  content: "💘";
+}
+/*cambia a azul el texto de ejemplo del ejemplo*/
+#placeholderEx::placeholder{
+  color: red;
+}
+/*cuando pase el raton encima el fondo del ejemplo de active cambia a azul y las letras negras*/
+#activeEx:hover{
+  background-color: #29D9D5;
+  color: #121214;
+}
+/*cuando le da click al boton de ejemplo cambia el fondo y el color*/
+#activeEx:active{
+  background-color: red;
+  color: #121214;
+}
+/*Cuando estas escribiendo el texto es de color azul*/
+#focusEx:focus{
+  color: #29D9D5;
+}
+/*color azul con especificidad 101*/
+#especificidadEx p{
+  color: blue;
+}
+/*color azul con especificidad 100*/
+#especificidadExP{
+  color: #ff0e0e;
+}
+/*contenedor flex es un ul*/
+#continerFlex{
+  /*Contenedor ul es display flex 1dimension estructura*/
+  display: flex;
+  background-color: #ff0e0e;
+  /*Centra contenido horizontalmente*/
+  justify-content: center;
+  /*Centra contenido verticalmente*/
+  align-items: center;
+  /*No es responsive*/
+  height: 500px;
+  /*Cambiade direccion horizontal a vertical*/
+  flex-direction: column;
+}
+/*Item li */
+.itemFlex{
+  /*Contenedor li es flex para centrar el texto*/
+  display: flex;
+  background-color: aqua;
+  /*No es responsive*/
+  width: 100px;
+  height: 100px;
+  border: #121214 2px solid;
+  margin: 1em;
+  /*Centra contenido verticalmente que es texto*/
+  justify-content: center;
+  /*Centra contenido verticalmente que es texto*/
+  align-items: center;
+  color: #ff0e0e;
+  font-size: 2em;
+}
+/*Contenedor grid que es un ul*/
+#continerGrid{
+  max-width:90vw ;
+  /*Contenedor es grid 2d estructura*/
+  display:grid;
+  background-color: blue;
+  /*divide el grid en 3 columnas y poniedo fr dividimos en 3 fracciones iguales*/
+  grid-template-columns: 1fr 1fr 1fr;
+  /*divide el grid en 3 filas y poniedo fr dividimos en 3 fracciones iguales*/
+  grid-template-rows: 1fr 1fr 1fr;
+  /*ancho 100%*/
+  width: 100%;
+}
+/*items grid li*/
+.itemGrid{
+  background-color: aqua;
+  border: #121214 2px solid; 
+  color: #ff0e0e;
+  font-size: 2em;
+  margin: 20% auto;
+  padding: 20%;
+  text-align: center;
+  box-sizing: border-box;
+}
+/*continer del continer grid dentro de un flex ul dentro de un section*/
+#gridExContiner{
+  /*flex centra el titulo h2 y la estructura grid que es un ul*/
+  display: flex;
+  border: #F5F3EA 2px solid;
+  /*Centra contenido horizontalmente*/
+  justify-content: center;
+  /*Centra contenido verticalmente*/
+  align-items: center;
+  /*Cambia la direccion del flex de horizontal a vertical*/
+  flex-direction: column;
+}
+/*Todos los ul tiene un padding de 20 por defecto y una decoracion es importantisimo quitarlos porque si no molesta mucho*/
+ul{
+
+  padding: 0;
+  list-style: none;
+}
+
+/*pongo posision relativa el contenedor porque si no no sirve el absolute*/
+#positionctn{
+  /*Si usara 100 vh saldria mas ancho porque en view width no cuenta la barra de scroll lo suma*/
+  width: 100%;
+  height: 50vh;
+  border: rgb(8, 0, 255) .1em solid;
+  display: inline-block;
+  background-color: #29D9D5;
+  /*Hace que la suma del border y el pading y el elemento de el width que le puse en este caso el 100%*/
+  box-sizing:border-box;
+  text-align: center;
+  font-size: 200%;
+  position: relative;
+}
+/*lo posisione a arriba a la izquierda del contenedor con margen de 10 px de arriba e izquierda en relative */
+#positionRelative{
+  border: .2em solid rgb(217, 41, 141);
+  width: 10%;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: #121214;
+}
+/*lo posisione a abajo a la derecha del contenedor con margen de 10 px de abajo y derecha*/
+#positionAbsolute{
+  border: .2em solid rgb(217, 41, 141);
+  width: 10%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #121214;
+}
+/*asi centro con position relative horizontalmente y verticalmente si no molestara el position relative de la izquierda
+
+#positionRelativeCentro{
+  border: .2em solid rgb(217, 41, 141);
+  width: 10%;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  top: 50%;
+  bottom: 50%;
+  margin: auto;
+  color: #121214;
+}
+*/
+#positionRelativeCentro{
+  border: .2em solid rgb(217, 41, 141);
+  width: 10%;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  /*el top - lo que mide lo que molesta en la izquierda*/
+  top: -32px;
+  bottom: 0px;
+  margin: auto;
+  color: #121214;
+}
+/*asi centro con position absolute horizontalmente y abajo si olocaro top 0px se centra :vertical*/
+#positionAbsoluteCentro{
+  border: .2em solid rgb(217, 41, 141);
+  width: 10%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  /*Importantisimo el margin auto para centrar*/
+  margin: auto;
+  color: #121214;
+}
+
+/**/
+#positionFixed{
+  border: .2em solid rgb(217, 41, 141);
+  width: 10%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #F5F3EA;
+  background-color: #121214;
+  /*Hace que la suma del border y el pading y el elemento de el width que le puse en este caso el 100% es importante porque si no se va de la pantalla el borde*/
+  box-sizing:border-box;
+}
+#positionSticky{
+  border: .2em solid rgb(217, 41, 141);
+  width: 10%;
+  position: sticky;
+  top: 0;
+  left: 100%;
+  color: #121214;
+}
+
+/*El css no es responsive porque una tabla es mas grande que todo lo demas*/
+#ej1{
+  margin: auto;
+  width: 50%;
+  background-color: red;
+  text-align: center;
+}
+#eje2{
+  width: 50%;
+  background-color: #29D9D5;
+  padding:2%;
+  text-align: center;
+  box-sizing:border-box;
+  margin: auto;
+}
+#variable{
+  width: 90vw;
+}
+/*Css responsive*/
+#mostlyFluidEx{
+  background-color: var(--contrastColor);
+  border: 2px var(--contrastColorDark) solid;
+  height: 100vh;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.C1,.C2,.C3,.C4,.C5{
+  width: 100%;
+  height: 20%;
+  z-index: 5;
+
+}
+.layoutShifterctn .layoutShifterItem1,.layoutShifterItem2,.layoutShifterItem3,.layoutShifterItem4,.layoutShifterItem5{
+  height: 20%;
+  width: 100%;
+
+}
+.C1,.layoutShifterItem1,.columnDropItemC1{
+  background-color: red;
+}
+.C2,.layoutShifterItem2,.columnDropItemC2{
+  background-color: blue;
+}.C3,.layoutShifterItem3,.columnDropItemC3{
+  background-color: yellow;
+}.C4,.layoutShifterItem4,.columnDropItemC4{
+  background-color: white;
+}.C5,.layoutShifterItem5,.columnDropItemC5{
+  background-color: black;
+}
+.layoutShifterctn{
+  background-color: var(--contrastColor);
+  border: 2px var(--contrastColorDark) solid;
+  height: 100vh;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.columnDropItemC1,.columnDropItemC2,.columnDropItemC3,.columnDropItemC4,.columnDropItemC5{
+  width: 100%;
+  min-width: 150px;
+  height: 150px;
+}
+.columnDropContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width:600px) {
+  .C2,.C3,.C4{
+      width: 50%;    
+  }
+  .layoutShifterctn .layoutShifterItem1{
+      width: 25%;
+  }
+  .layoutShifterctn .layoutShifterItem4{
+      width: 75%;
+  }
+  .layoutShifterctn .layoutShifterItem5{
+      width: 100%;
+  }
+  .columnDropItemC1 {
+      width: 25%;
+      order: 1;
+    }
+    .columnDropItemC2 {
+      width: 75%;
+      order: 2;
+    }
+    .columnDropItemC3 {
+      width: 100%;
+      order: 3;
+    }
+    .columnDropItemC4 {
+      width: 100%;
+      order: 4;
+    }
+    .columnDropItemC5 {
+      width: 100%;
+      order: 5;
+    }
+}
+@media (min-width:800px) {
+  .C1,.C3,.C4{
+      width: 60%;    
+  }
+  .C2{
+      width: 40%;    
+  }
+  .C3,.C4{
+      width: 33%;    
+  }
+  .C5{
+      width: 340%;    
+  }
+  .layoutShifterctn{width:800px;margin-left:auto;margin-right:auto}
+  .layoutShifterctn .layoutShifterItem1{width:50%;order:1}
+  .layoutShifterctn .layoutShifterItem4{width:100%}
+  .layoutShifterctn .layoutShifterItem5{width:50%;order:2}
+  .columnDropItemC1 {
+      width: 30%;
+    }
+    .columnDropItemC2 {
+      width: 40%;
+    }
+    .columnDropItemC3 {
+      width: 30%;
+    }
+    .columnDropItemC4 {
+      width: 50%;
+    }
+    .columnDropItemC5 {
+      width: 50%;
+    }
+}
