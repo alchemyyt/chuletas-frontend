@@ -5,22 +5,18 @@ const Menu = () => {
     <div className='menu'>
       <section>
         <h3>
-          <Link href={'/web'}> Web 💻</Link>
+          <Link href='/web'> Web 💻</Link>
         </h3>
         <span class='webMenuSpan'>
-          <ol>
-            
-          </ol>
+          <ol />
         </span>
       </section>
       <section>
         <h3>
-          <Link href={'/ingles'}> ingles 💻</Link>
+          <Link href='/ingles'> ingles 💻</Link>
         </h3>
         <span class='inglesMenuSpan'>
-          <ol>
-            
-          </ol>
+          <ol />
         </span>
       </section>
     </div>

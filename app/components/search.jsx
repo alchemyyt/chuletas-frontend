@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { createAutocomplete } from '@algolia/autocomplete-core'
 import '../styles/search.css'
-import { useState,useMemo,useRef } from 'react'
+import { useState, useMemo, useRef } from 'react'
 import Link from 'next/link'
 const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />
-const AutocompleteItem = ({ id, slug,title }) => {
+const AutocompleteItem = ({ id, slug, title }) => {
   return (
     <Link href={`/${id}`}>
       <li>{title}</li>
@@ -14,30 +14,29 @@ const AutocompleteItem = ({ id, slug,title }) => {
   )
 }
 const Search = (props) => {
-  const [autoCompleteState,setAutocompleteState]=useState({
+  const [autoCompleteState, setAutocompleteState] = useState({
     collections: [],
     isOpen: false
   })
   const autoComplete = useMemo(() => createAutocomplete({
-    placeholder:'Buscar',
+    placeholder: 'Buscar',
     onStateChange: ({ state }) => setAutocompleteState(state),
     getSources: () => [{
       sourceId: 'posts-next-api',
       getItems: ({ query }) => {
-        if (!!query) {
+        if (!query) {
           return fetch(`https://cms-y0rj.onrender.com/api/posts?where[subject][equals]=${query}`)
-            .then(res=>res.json())
+            .then(res => res.json())
         }
       }
     }
     ],
     ...props
   }), [props])
-  const formRef=useRef(null)
-  const inputRef=useRef(null)
-  const panelRef=useRef(null)
+  const inputRef = useRef(null)
+  const panelRef = useRef(null)
 
-  const formProps= autoComplete.getFormProps({
+  const formProps = autoComplete.getFormProps({
     inputElement: inputRef.current
   })
   const inputProps = autoComplete.getInputProps({
@@ -49,12 +48,12 @@ const Search = (props) => {
         <label for='search'>
           <div className='searchIcon'>{searchIcon}</div>
         </label>
-        <input type='text' name='search' id='search' placeholder='Buscar' {...inputProps}/>
+        <input type='text' name='search' id='search' placeholder='Buscar' {...inputProps} />
       </div>
       {
         autoCompleteState.isOpen && (
           <div ref={panelRef} {...autoComplete.getPanelProps()}>
-            {autoCompleteState.collections.map((collection,index)=>{
+            {autoCompleteState.collections.map((collection, index) => {
               const { items } = collection
               const data = items[0].docs
               console.log(data)

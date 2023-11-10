@@ -1,9 +1,9 @@
-import ContentWeb from "../components/contentWeb";
+import ContentWeb from '../components/contentWeb'
 
 const Page = () => {
   return (
-      <ContentWeb/>
-  );
+    <ContentWeb />
+  )
 }
 
-export default Page;
+export default Page

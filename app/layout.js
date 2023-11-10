@@ -1,5 +1,5 @@
-import Footer from "./components/footer"
-import Navegation from "./components/navegation"
+import Footer from './components/footer'
+import Navegation from './components/navegation'
 import './styles/globals.css'
 
 export const metadata = {
@@ -13,7 +13,7 @@ export default function RootLayout ({ children }) {
       <body>
         <Navegation />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )
