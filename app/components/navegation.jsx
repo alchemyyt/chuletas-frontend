@@ -12,7 +12,6 @@ const menuIcon = <FontAwesomeIcon icon={faBars} />
 const Navegation = () => {
   const [clicked, setClicked] = useState(false) // defino el use state en falso
   const [iconClick, setIconClick] = useState(false)
-  console.log(iconClick)
   const handleClick = () => { // defino la funcion cuando le de click cambie el use state
     setClicked(!clicked)
   }
@@ -24,9 +23,9 @@ const Navegation = () => {
       <nav className='navBar'>
         <a href='/'><h1>Chuletas de ati 🥩</h1></a>
         {iconClick ? <MenuMobile /> : null}
-        <span class='navbarSpan'>
+        <span className='navbarSpan'>
           <div className='navRight'>
-            <i class='fa-solid fa-xmark' id='closeMenuMobile' />
+            <i className='fa-solid fa-xmark' id='closeMenuMobile' />
             <div className='menuCtn'>
               <span id='menuSpan' onClick={handleClick/* ejecuto la funcion cuando le de click a este elemento */}>
                 menu

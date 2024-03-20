@@ -6,7 +6,7 @@ import '../styles/search.css'
 import { useState, useMemo, useRef } from 'react'
 import Link from 'next/link'
 const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} />
-const AutocompleteItem = ({ id, slug, title }) => {
+const AutocompleteItem = ({ id, title }) => {
   return (
     <Link href={`/${id}`}>
       <li>{title}</li>
@@ -24,7 +24,7 @@ const Search = (props) => {
     getSources: () => [{
       sourceId: 'posts-next-api',
       getItems: ({ query }) => {
-        if (!query) {
+        if (query) {
           return fetch(`https://cms-y0rj.onrender.com/api/posts?where[subject][equals]=${query}`)
             .then(res => res.json())
         }
@@ -56,8 +56,6 @@ const Search = (props) => {
             {autoCompleteState.collections.map((collection, index) => {
               const { items } = collection
               const data = items[0].docs
-              console.log(data)
-              console.log('holas')
               return (
                 <section key={`section-${index}`} className='autoCompleteSection'>
                   {data.length > 0 && (
@@ -76,5 +74,4 @@ const Search = (props) => {
     </form>
   )
 }
-
 export default Search
