@@ -9,7 +9,7 @@ const Content = async () => {
     <div className='content'>
       {ingles.map((valor, indice) =>
         <Link key={indice} href={valor.id}>
-          <img src={valor.image.url} alt={valor.image.alt} />
+          <img src={valor?.image?.url || 'https://cms-y0rj.onrender.com/media/node.png'} alt={valor?.image?.alt || 'alt por defecto'} />
           <div>
             <h5>{valor.title}</h5>
           </div>
