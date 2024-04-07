@@ -11,7 +11,7 @@ const Page = async ({ params }) => {
     <div className='post'>
       <h1>{datos.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: datos.content }} />
-      <img src={datos.image.url} alt='imagen' />
+      <img src={datos.image} alt={datos.title} />
     </div>
   )
 }
