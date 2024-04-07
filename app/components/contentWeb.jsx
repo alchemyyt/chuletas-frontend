@@ -9,7 +9,7 @@ const Content = async () => {
     <div className='content'>
       {web.map((valor, indice) =>
         <Link key={indice} href={valor.id}>
-          <img src={valor?.image} alt={valor.title} />
+          <img src={valor.image} alt={valor.title} />
           <div>
             <h5>{valor.title}</h5>
           </div>
